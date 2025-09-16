@@ -1,34 +1,34 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, User, Target, Info, Edit } from "lucide-react"
-import Link from "next/link"
-import { getUserProfile, type UserProfile } from "@/lib/db"
-import { useDatabase } from "@/components/database-provider"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowLeft, User, Target, Info, Edit } from "lucide-react";
+import Link from "next/link";
+import { getUserProfile, type UserProfile } from "@/lib/db";
+import { useDatabase } from "@/components/database-provider";
 
 export default function SettingsPage() {
-  const [profile, setProfile] = useState<UserProfile | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const { isReady } = useDatabase()
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const { isReady } = useDatabase();
 
   useEffect(() => {
     async function loadProfile() {
-      if (!isReady) return
+      if (!isReady) return;
 
       try {
-        const userProfile = await getUserProfile()
-        setProfile(userProfile || null)
+        const userProfile = await getUserProfile();
+        setProfile(userProfile || null);
       } catch (error) {
-        console.error("Failed to load profile:", error)
+        console.error("Failed to load profile:", error);
       } finally {
-        setIsLoading(false)
+        setIsLoading(false);
       }
     }
 
-    loadProfile()
-  }, [isReady])
+    loadProfile();
+  }, [isReady]);
 
   if (isLoading) {
     return (
@@ -38,7 +38,7 @@ export default function SettingsPage() {
           <p>กำลังโหลด...</p>
         </div>
       </main>
-    )
+    );
   }
 
   return (
@@ -71,7 +71,9 @@ export default function SettingsPage() {
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <div className="text-muted-foreground">เพศ</div>
-                      <div className="font-medium">{profile.gender === "male" ? "ชาย" : "หญิง"}</div>
+                      <div className="font-medium">
+                        {profile.gender === "male" ? "ชาย" : "หญิง"}
+                      </div>
                     </div>
                     <div>
                       <div className="text-muted-foreground">อายุ</div>
@@ -91,11 +93,15 @@ export default function SettingsPage() {
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <div className="text-muted-foreground">BMR</div>
-                        <div className="font-medium text-blue-600">{profile.bmr} kcal</div>
+                        <div className="font-medium text-blue-600">
+                          {profile.bmr} kcal
+                        </div>
                       </div>
                       <div>
                         <div className="text-muted-foreground">TDEE</div>
-                        <div className="font-medium text-emerald-600">{profile.tdee} kcal</div>
+                        <div className="font-medium text-emerald-600">
+                          {profile.tdee} kcal
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -105,7 +111,10 @@ export default function SettingsPage() {
               )}
 
               <Link href="/profile">
-                <Button variant="outline" className="w-full justify-start bg-transparent">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start bg-transparent"
+                >
                   <Edit className="h-4 w-4 mr-2" />
                   {profile ? "แก้ไขข้อมูลส่วนตัว" : "ตั้งค่าข้อมูลส่วนตัว"}
                 </Button>
@@ -123,11 +132,20 @@ export default function SettingsPage() {
             <CardContent className="space-y-2">
               <div className="flex justify-between items-center">
                 <span>เป้าหมายแคลอรี่ต่อวัน</span>
-                <span className="font-semibold">{profile?.daily_kcal_goal || 2000} kcal</span>
+                <span className="font-semibold">
+                  {profile?.daily_kcal_goal || 2000} kcal
+                </span>
               </div>
-              {profile && <div className="text-xs text-muted-foreground">อิงจาก TDEE: {profile.tdee} kcal/วัน</div>}
+              {profile && (
+                <div className="text-xs text-muted-foreground">
+                  อิงจาก TDEE: {profile.tdee} kcal/วัน
+                </div>
+              )}
               <Link href="/profile">
-                <Button variant="outline" className="w-full justify-start bg-transparent">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start bg-transparent"
+                >
                   ปรับเป้าหมาย
                 </Button>
               </Link>
@@ -143,7 +161,7 @@ export default function SettingsPage() {
             </CardHeader>
             <CardContent className="space-y-2">
               <div className="text-sm text-muted-foreground space-y-1">
-                <p>CalCam v1.0.0</p>
+                <p>CalKal v1.0.0</p>
                 <p>แอปบันทึกแคลอรี่จากรูปถ่าย</p>
                 <p>ใช้งานออฟไลน์ได้</p>
                 <p>พัฒนาด้วย Next.js + ONNX Runtime</p>
@@ -153,5 +171,5 @@ export default function SettingsPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

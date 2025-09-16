@@ -1,6 +1,6 @@
 {
-  "name": "CalCam - บันทึกแคลจากรูป",
-  "short_name": "CalCam",
+  "name": "CalKal - บันทึกแคลจากรูป",
+  "short_name": "CalKal",
   "description": "แอปบันทึกแคลอรี่จากรูปถ่ายอาหาร ใช้งานออฟไลน์ได้",
   "start_url": "/",
   "display": "standalone",

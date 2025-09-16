@@ -43,7 +43,7 @@ export interface UserProfile {
 }
 
 // Database schema
-const db = new Dexie("CalCamDB") as Dexie & {
+const db = new Dexie("CalKalDB") as Dexie & {
   foods: EntityTable<Food, "id">
   entries: EntityTable<MealEntry, "id">
   profile: EntityTable<UserProfile, "id">
