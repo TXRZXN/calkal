@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "source": "Thai FCD v3 - Popular Thai Foods",
+  "foods": [
+    {
+      "id": "th_001",
+      "name_th": "ข้าวผัดกุ้ง",
+      "name_en": "Fried Rice with Shrimp",
+      "category": "อาหารจานเดียว",
+      "kcal_per_100g": 165,
+      "protein": 8.2,
+      "carb": 24.5,
+      "fat": 4.1,
+      "fiber": 0.8,
+      "tags": ["ข้าว", "กุ้ง", "ผัด", "อาหารจานเดียว"]
+    },
+    {
+      "id": "th_002",
+      "name_th": "ผัดไทย",
+      "name_en": "Pad Thai",
+      "category": "ก๋วยเตี๋ยว",
+      "kcal_per_100g": 180,
+      "protein": 6.8,
+      "carb": 28.3,
+      "fat": 5.2,
+      "fiber": 1.2,
+      "tags": ["เส้น", "ผัด", "กุ้ง", "ไข่", "ถั่วงอก"]
+    },
+    {
+      "id": "th_003",
+      "name_th": "ต้มยำกุ้ง",
+      "name_en": "Tom Yum Goong",
+      "category": "แกง/ต้ม",
+      "kcal_per_100g": 45,
+      "protein": 4.5,
+      "carb": 3.2,
+      "fat": 1.8,
+      "fiber": 0.5,
+      "tags": ["ต้ม", "กุ้ง", "เปรี้ยว", "เผ็ด", "น้ำใส"]
+    },
+    {
+      "id": "th_004",
+      "name_th": "แกงเขียวหวานไก่",
+      "name_en": "Green Curry with Chicken",
+      "category": "แกง/ต้ม",
+      "kcal_per_100g": 125,
+      "protein": 8.9,
+      "carb": 6.4,
+      "fat": 8.2,
+      "fiber": 1.1,
+      "tags": ["แกง", "ไก่", "เขียวหวาน", "กะทิ", "เผ็ด"]
+    },
+    {
+      "id": "th_005",
+      "name_th": "ส้มตำไทย",
+      "name_en": "Thai Papaya Salad",
+      "category": "ยำ/สลัด",
+      "kcal_per_100g": 35,
+      "protein": 1.2,
+      "carb": 7.8,
+      "fat": 0.3,
+      "fiber": 2.1,
+      "tags": ["มะละกอ", "ยำ", "เปรี้ยว", "เผ็ด", "สด"]
+    },
+    {
+      "id": "th_006",
+      "name_th": "ข้าวขาวสวย",
+      "name_en": "Steamed White Rice",
+      "category": "ข้าว",
+      "kcal_per_100g": 130,
+      "protein": 2.7,
+      "carb": 28.2,
+      "fat": 0.3,
+      "fiber": 0.4,
+      "tags": ["ข้าว", "ขาว", "หุง", "พื้นฐาน"]
+    },
+    {
+      "id": "th_007",
+      "name_th": "ไก่ย่าง",
+      "name_en": "Grilled Chicken",
+      "category": "ย่าง/ปิ้ง",
+      "kcal_per_100g": 195,
+      "protein": 29.8,
+      "carb": 0,
+      "fat": 7.8,
+      "fiber": 0,
+      "tags": ["ไก่", "ย่าง", "โปรตีน", "ไม่มีคาร์บ"]
+    },
+    {
+      "id": "th_008",
+      "name_th": "ข้าวมันไก่",
+      "name_en": "Chicken Rice",
+      "category": "อาหารจานเดียว",
+      "kcal_per_100g": 155,
+      "protein": 12.4,
+      "carb": 18.6,
+      "fat": 4.2,
+      "fiber": 0.3,
+      "tags": ["ข้าว", "ไก่", "มัน", "อาหารจานเดียว"]
+    },
+    {
+      "id": "th_009",
+      "name_th": "ลาบหมู",
+      "name_en": "Pork Larb",
+      "category": "ยำ/สลัด",
+      "kcal_per_100g": 165,
+      "protein": 18.2,
+      "carb": 4.1,
+      "fat": 8.5,
+      "fiber": 1.2,
+      "tags": ["หมู", "ลาบ", "อีสาน", "เผ็ด", "สมุนไพร"]
+    },
+    {
+      "id": "th_010",
+      "name_th": "มะม่วงข้าวเหนียว",
+      "name_en": "Mango Sticky Rice",
+      "category": "ของหวาน",
+      "kcal_per_100g": 185,
+      "protein": 3.2,
+      "carb": 38.5,
+      "fat": 3.8,
+      "fiber": 1.1,
+      "tags": ["มะม่วง", "ข้าวเหนียว", "กะทิ", "ของหวาน", "ไทย"]
+    }
+  ]
+}

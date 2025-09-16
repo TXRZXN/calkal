@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 Calkal — Calorie Logging from Photos
+
+A **Progressive Web App (PWA)** built with **Next.js + TypeScript** for:
+- Taking food photos/uploading images → processed by **ONNX Runtime Web** (WebGPU/WASM fallback)  
+- Allowing manual input of portion size (grams) → calculating **energy (kcal) + macronutrients (protein/carbs/fat)**  
+- Logging daily meals, reviewing summaries, editing history  
+- Supporting **BMR/TDEE** calculation from user profile (gender/weight/height/age/activity level)  
+
+> **Fully localized in Thai**  
+> **Deploy instantly on Vercel**
+
+---
+
+## ✨ Key Features (MVP)
+
+- 📷 **Take photos / upload images** (JPG/JPEG/PNG ≤ 5MB)
+- 🤖 **Automatic food recognition** with lightweight models (MobileNetV3 / EN-Lite0 → ONNX)
+- ✍️ **Manual input/editing** when recognition is inaccurate
+- 🍚 **Offline nutrition database** (Thai FCD v3 + USDA FDC → JSON + IndexedDB)
+- 📊 **BMR/TDEE calculation** (Mifflin-St Jeor + Activity Factors)
+- 🗓️ **Daily log & summary** of kcal + macros
+- 📱 **PWA Installable** + Offline-first (caching models and nutrition data)
+- 🔒 **Secure by default**: HTTPS, CSP, HSTS, NoSniff, max file size ≤ 5MB
+
+---
+
+
+## 🛠️ Tech Stack
+
+- [Next.js 15 (App Router)](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- [onnxruntime-web](https://onnxruntime.ai/docs/api/js/)
+- [Dexie.js (IndexedDB)](https://dexie.org/)
+- [next-pwa](https://github.com/shadowwalker/next-pwa) (Workbox)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally:
+
+1. **Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   git clone [your-project-url]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.Remove existing node_modules and package-lock.json :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+    rm -rf node_modules package-lock.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.Install dependencies:
 
-## Learn More
+```bash
+    npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4.Start the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+    npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5.Open your browser and visit:
+  [http://localhost:3000](http://localhost:3000/) -local
